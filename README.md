@@ -1,24 +1,14 @@
-# Boxing and Unboxing
-
-## Pill Category
-
-Language (C#)
+# Installation Scenarios
 
 ## Description
 
-**Boxing**
+Windows Installer is providing a set of properties based on which we  can deduce what scenario is running (install, uninstall, repair, etc).
 
-- When an instance of a value type is cast to a reference type, a "coat" is created over the instance, in order to be perceived as a reference type. This is called boxing.
+But it is not very intuitively what properties should be checked for each scenario. We propose a set of custom properties to create in our installers that helps us in this direction.
 
-**Unboxing**
+This tutorial demonstrates how to identify the different types of installation scenarios (install, uninstall, repair, etc.)
 
-- Unboxing is the reversed process, of extracting the value from the "coat".
-
-**Question**
-
-Everybody knows that boxing and unboxing are very time consuming. But, is it really true? This C# Pill is trying to answer this question:
-
-- Are the boxing and unboxing processes really as time consuming as it is said?
+More details in the `doc/article` here: [article](doc/article/README.md).
 
 ## Donations
 
