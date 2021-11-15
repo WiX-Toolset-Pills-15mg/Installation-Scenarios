@@ -1,0 +1,1 @@
+msiexec /f InstallationScenarios.msi /l*vx repair.log

@@ -1,0 +1,1 @@
+msiexec /x InstallationScenarios.msi /l*vx uninstall.log

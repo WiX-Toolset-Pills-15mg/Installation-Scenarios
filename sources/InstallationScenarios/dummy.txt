@@ -1,0 +1,8 @@
+﻿WiX Toolset Pills - Installation Scenarios
+==============================================================================
+
+This file is part of the "Installation Scenarios" Pill.
+The pill demonstrates how to identify the different types of installation scenarios (install, uninstall, repair, etc.)
+
+For more details please chech the GitHub repository:
+https://github.com/WiX-Toolset-Pills-15mg/Installation-Scenarios
