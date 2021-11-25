@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
-Wix Toolset Pills 15mg
+WiX Toolset Pills 15mg
 Copyright (C) 2019-2021 Dust in the Wind
 
 This program is free software: you can redistribute it and/or modify
@@ -28,7 +28,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         Manufacturer="Dust in the Wind"
         UpgradeCode="10dc8e22-1c33-459c-b9fb-87807f15203b">
 
-        <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+        <Package
+            InstallerVersion="200"
+            Compressed="yes"
+            InstallScope="perMachine" />
 
         <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
         <MediaTemplate />
@@ -76,10 +79,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <Feature Id="ProductFeature" Title="Installation Scenarios" Level="1">
             <ComponentGroupRef Id="FileComponents" />
         </Feature>
-
-        <Binary
-            Id="CustomActionsBinary"
-            SourceFile="$(var.InstallationScenarios.CustomActions.TargetDir)$(var.InstallationScenarios.CustomActions.TargetName).CA.dll" />
 
         <InstallUISequence>
             <Custom Action="LogScenarioProperties" Before="LaunchConditions"/>
