@@ -8,7 +8,7 @@ But it is not very intuitively what properties should be checked for each scenar
 
 This tutorial demonstrates how to identify the different types of installation scenarios (install, uninstall, repair, etc.)
 
-More details in the `doc/article` here: [article](doc/article/README.md).
+More details in the `doc/article/README.md` here: [article](doc/article/README.md).
 
 ## Donations
 
