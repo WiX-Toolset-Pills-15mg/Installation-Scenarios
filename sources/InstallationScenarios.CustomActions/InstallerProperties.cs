@@ -17,7 +17,7 @@
 using System;
 using Microsoft.Deployment.WindowsInstaller;
 
-namespace InstallationScenarios.CustomActions
+namespace DustInTheWind.InstallationScenarios.CustomActions
 {
     internal class InstallerProperties
     {

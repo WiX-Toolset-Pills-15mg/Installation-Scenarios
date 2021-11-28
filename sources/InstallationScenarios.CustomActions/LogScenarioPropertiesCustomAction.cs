@@ -16,7 +16,7 @@
 
 using Microsoft.Deployment.WindowsInstaller;
 
-namespace InstallationScenarios.CustomActions
+namespace DustInTheWind.InstallationScenarios.CustomActions
 {
     public class LogScenarioPropertiesCustomAction
     {

@@ -36,47 +36,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
         <MediaTemplate />
 
-        <!--<SetProperty After="SetFirstInstall" Id="Upgrading" Value="true">
-            WIX_UPGRADE_DETECTED AND NOT (REMOVE="ALL")
-        </SetProperty>-->
-        <!--<SetProperty After="SetUpgrading" Id="Uninstalling" Value="true">
-            Installed AND (REMOVE="ALL") AND NOT (WIX_UPGRADE_DETECTED OR UPGRADINGPRODUCTCODE)
-        </SetProperty>-->
-        <!--<SetProperty After="SetUninstalling" Id="Maintenance" Value="true">
-            Installed AND NOT Upgrading AND NOT Uninstalling AND NOT UPGRADINGPRODUCTCODE
-        </SetProperty>-->
+        <PropertyRef Id="IncludeInstallationScenarios"/>
 
+        <Feature 
+            Id="ProductFeature" 
+            Title="Installation Scenarios"
+            Level="1">
 
-        <SetProperty Id="InstallScenario" After="FindRelatedProducts" Value="true">
-            NOT Installed AND NOT WIX_UPGRADE_DETECTED AND NOT WIX_DOWNGRADE_DETECTED
-        </SetProperty>
-
-        <SetProperty Id="UninstallScenario" After="SetInstallScenario" Value="true">
-            REMOVE="ALL" AND NOT UPGRADINGPRODUCTCODE
-        </SetProperty>
-
-        <SetProperty Id="RepairScenario" After="SetUninstallScenario" Value="true">
-            REINSTALL="ALL"
-        </SetProperty>
-
-        <SetProperty Id="MajorUpgradeUninstallScenario" After="SetRepairScenario" Value="true">
-            REMOVE="ALL" AND UPGRADINGPRODUCTCODE
-        </SetProperty>
-
-        <SetProperty Id="MajorUpgradeInstallScenario" After="SetMajorUpgradeUninstallScenario" Value="true">
-            WIX_UPGRADE_DETECTED
-        </SetProperty>
-
-        <SetProperty Id="MajorUpgradeScenario" After="SetMajorUpgradeInstallScenario" Value="true">
-            UpgradeUninstallScenario OR UpgradeInstallScenario
-        </SetProperty>
-
-        <SetProperty Id="DowngradeScenario" After="SetMajorUpgradeScenario" Value="true">
-            WIX_DOWNGRADE_DETECTED
-        </SetProperty>
-
-
-        <Feature Id="ProductFeature" Title="Installation Scenarios" Level="1">
             <ComponentGroupRef Id="FileComponents" />
         </Feature>
 

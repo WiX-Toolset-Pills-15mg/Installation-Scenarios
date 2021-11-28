@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+WiX Toolset Pills 15mg
+Copyright (C) 2019-2021 Dust in the Wind
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+
+        <Property Id="IncludeInstallationScenarios" Value="true" />
+
+        <SetProperty Id="InstallScenario" After="FindRelatedProducts" Value="true">
+            NOT Installed AND NOT WIX_UPGRADE_DETECTED AND NOT WIX_DOWNGRADE_DETECTED
+        </SetProperty>
+
+        <SetProperty Id="UninstallScenario" After="SetInstallScenario" Value="true">
+            REMOVE="ALL" AND NOT UPGRADINGPRODUCTCODE
+        </SetProperty>
+
+        <SetProperty Id="RepairScenario" After="SetUninstallScenario" Value="true">
+            REINSTALL="ALL"
+        </SetProperty>
+
+        <SetProperty Id="MajorUpgradeUninstallScenario" After="SetRepairScenario" Value="true">
+            REMOVE="ALL" AND UPGRADINGPRODUCTCODE
+        </SetProperty>
+
+        <SetProperty Id="MajorUpgradeInstallScenario" After="SetMajorUpgradeUninstallScenario" Value="true">
+            WIX_UPGRADE_DETECTED
+        </SetProperty>
+
+        <SetProperty Id="MajorUpgradeScenario" After="SetMajorUpgradeInstallScenario" Value="true">
+            UpgradeUninstallScenario OR UpgradeInstallScenario
+        </SetProperty>
+
+        <SetProperty Id="DowngradeScenario" After="SetMajorUpgradeScenario" Value="true">
+            WIX_DOWNGRADE_DETECTED
+        </SetProperty>
+
+    </Fragment>
+</Wix>

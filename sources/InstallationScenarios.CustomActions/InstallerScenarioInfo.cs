@@ -17,7 +17,7 @@
 using System;
 using System.Text;
 
-namespace InstallationScenarios.CustomActions
+namespace DustInTheWind.InstallationScenarios.CustomActions
 {
     internal class InstallerScenarioInfo
     {
