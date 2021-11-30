@@ -46,7 +46,7 @@ The snippet below contains the proposed properties that can be defined and used 
 
 ## MSI's properties
 
-The custom properties previously proposed are computed based on the following MSI properties (first column) created by Windows Installer.
+The custom properties previously proposed are computed based on the following MSI properties created by Windows Installer (first column).
 
 This table presents their values for different scenarios.
 
