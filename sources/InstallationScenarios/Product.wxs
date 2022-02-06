@@ -2,7 +2,7 @@
 
 <!--
 WiX Toolset Pills 15mg
-Copyright (C) 2019-2021 Dust in the Wind
+Copyright (C) 2019-2022 Dust in the Wind
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         Id="*"
         Name="Installation Scenarios - WiX Toolset Pill"
         Language="1033"
-        Version="2.0.0.0"
+        Version="1.0.0.0"
         Manufacturer="Dust in the Wind"
         UpgradeCode="10dc8e22-1c33-459c-b9fb-87807f15203b">
 
